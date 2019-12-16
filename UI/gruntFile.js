@@ -14,23 +14,24 @@ module.exports = function (grunt) {
             },
             js: {
                 src:  [
-                    'libs/jquery.js',
+                //    'libs/jquery.js',
                     'libs/jquery.tmpl.min.js',
                     'libs/jquery-ui.min.js',
                     '../libs/lodash.min.js',
-                    '../libs/d3.v4.min.js',
-                    '../libs/KoreGraphAdapter.js',
+                //    '../libs/d3.v4.min.js',
+                //    '../libs/KoreGraphAdapter.js',
                     '../libs/anonymousassertion.js',
                     '../kore-bot-sdk-client.js',
                     '../libs/emoji.js',
-                    '../libs/purejscarousel.js',
+                //    '../libs/purejscarousel.js',
                     'chatWindow.js',
+                    'chatWindowWrapper.js',
                     'custom/customTemplate.js',
-                    '../libs/recorder.js',
-                    '../libs/recorderWorker.js',
-                    '../libs/speech/app.js',
-                    '../libs/speech/key.js',
-                    '../libs/client_api.js'
+                //    '../libs/recorder.js',
+                //    '../libs/recorderWorker.js',
+                //    '../libs/speech/app.js',
+                //    '../libs/speech/key.js',
+                //    '../libs/client_api.js'
                 ],
                 dest: 'dist/kore-ai-sdk' + '.min.js'
             }
@@ -43,9 +44,9 @@ module.exports = function (grunt) {
             target: {
               files: {
                 'dist/kore-ai-sdk.min.css': [
-                    'libs/jquery-ui.min.css',
+                //    'libs/jquery-ui.min.css',
                     'libs/emojione.sprites.css',
-                    '../libs/purejscarousel.css',
+                //    '../libs/purejscarousel.css',
                     'chatWindow.css',
                     'custom/customTemplate.css'
                 ]
