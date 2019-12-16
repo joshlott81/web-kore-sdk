@@ -811,18 +811,10 @@ function koreBotChat() {
         var me = this;
         $('.kore-chat-overlay').hide();
         bot.close();
-        if (!me.config.minimizeMode) {
-            bot.destroy();
-        }
+        bot.destroy();
         messagesQueue=[];
         if (me.config && me.config.chatContainer) {
-            if (!me.config.minimizeMode) {
-                me.config.chatContainer.remove();
-            }else{
-                me.config.chatContainer.find('.kore-chat-header .header-title').html(me.config.botMessages.reconnecting);
-                me.config.chatContainer.addClass('minimize');
-                me.skipedInit=true;                
-            }
+            me.config.chatContainer.remove();
         }
         if(ttsAudioSource) {
             ttsAudioSource.stop();
