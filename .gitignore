@@ -1,0 +1,8 @@
+# Ignore node modules
+ui/node_modules/
+
+# Ignore dist folder
+ui/dist/
+
+# Ignore package-lock
+ui/package-lock.json
