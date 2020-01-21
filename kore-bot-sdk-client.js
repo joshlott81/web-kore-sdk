@@ -5019,7 +5019,7 @@ if (typeof Object.create === 'function') {
     function SetCache(values) {
       var length = values ? values.length : 0;
 
-      this.data = { 'hash': nativeCreate(null), 'set': new Set };
+      this.data = { 'myash': nativeCreate(null), 'set': new Set };
       while (length--) {
         this.push(values[length]);
       }
@@ -5036,7 +5036,7 @@ if (typeof Object.create === 'function') {
      */
     function cacheIndexOf(cache, value) {
       var data = cache.data,
-          result = (typeof value == 'string' || isObject(value)) ? data.set.has(value) : data.hash[value];
+          result = (typeof value == 'string' || isObject(value)) ? data.set.has(value) : data.myash[value];
 
       return result ? 0 : -1;
     }
@@ -5054,7 +5054,7 @@ if (typeof Object.create === 'function') {
       if (typeof value == 'string' || isObject(value)) {
         data.set.add(value);
       } else {
-        data.hash[value] = true;
+        data.myash[value] = true;
       }
     }
 
